@@ -1,0 +1,583 @@
+.hero-scene-wrapper {
+    position: relative;
+    width: 100%;
+    
+    overflow: hidden;
+    
+}
+.animation-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.fade-element {
+    position: absolute;
+    opacity: 0; 
+    
+    animation: fadeInUp 1.2s ease-out forwards;
+}
+
+/* Define the animation movement and fade */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(1px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.flying-bird {
+    position: absolute;
+    animation: flyRightToLeft 25s linear infinite;
+}
+
+@keyframes flyRightToLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        
+        transform: translateX(-120vw); 
+    }
+}
+
+.butterfly-sway {
+    position: absolute;
+    animation: sway 1.2s linear infinite alternate;
+}
+@keyframes sway {
+    0% {
+        transform: translateX(10px);
+    }
+    100% {
+        
+        transform: translateX(0); 
+    }
+}
+
+.scene-base {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.layer-mask {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    pointer-events: none; 
+}
+.center-plants {
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    width: 32%;
+    height: auto; 
+    pointer-events: none; 
+}
+.z-2 { z-index: 2; }
+.z-3 { z-index: 3; }
+.z-4 { z-index: 4; }
+.z-5 { z-index: 5; }
+.z-6 { z-index: 6; }
+
+
+
+
+.custom-toggler-btn {
+    background-color: #13515A; 
+    border-radius: 8px;        
+    padding: 4px 10px;         
+    transition: background-color 0.3s ease;
+}
+
+
+.custom-toggler-icon {
+    font-size: 2.2rem;       
+    color: #ffffff;            
+    transition: transform 0.3s ease;
+}
+
+/* The Hover/Active State */
+.custom-toggler-btn:hover,
+.custom-toggler-btn[aria-expanded="true"] {
+    background-color: #1a6c78;
+}
+
+.custom-toggler-btn:hover .custom-toggler-icon,
+.custom-toggler-btn[aria-expanded="true"] .custom-toggler-icon {
+    transform: scale(1.1);     
+}
+
+
+
+.custom-nav-btn {
+    color: #ffffff !important;       
+    font-weight: 700;                
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 12px 15px;
+    border-radius: 8px; /* Added this so the un-hovered borders have soft corners */
+    
+    /* The Thicker Custom Border (2px instead of 1px, slightly more opaque) */
+    border: 2px solid rgba(253, 253, 253, 0.4) !important; 
+    
+    text-shadow: 0px 0px 8px rgba(19, 81, 90, 0.9); 
+}
+
+/* The Hover State */
+.custom-nav-btn:hover {
+    background-color: #13515A;       
+    color: #ffffff !important;       
+    border-radius: 8px;
+    
+    /* Keeps the border transparent on hover so the background color takes over */
+    border-color: transparent !important; 
+    
+    text-shadow: none;               
+}
+.barlow-thin {
+  font-family: "Barlow", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.barlow-extralight {
+  font-family: "Barlow", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.barlow-light {
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.barlow-regular {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.barlow-medium {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.barlow-semibold {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.barlow-bold {
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.barlow-extrabold {
+  font-family: "Barlow", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.barlow-black {
+  font-family: "Barlow", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.barlow-thin-italic {
+  font-family: "Barlow", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.barlow-extralight-italic {
+  font-family: "Barlow", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.barlow-light-italic {
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.barlow-regular-italic {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.barlow-medium-italic {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.barlow-semibold-italic {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.barlow-bold-italic {
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.barlow-extrabold-italic {
+  font-family: "Barlow", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.barlow-black-italic {
+  font-family: "Barlow", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
+
+/* =========================================
+   FOOTER STYLES
+   ========================================= */
+
+.custom-footer {
+    background-color: #AE8AAE;  
+    width: 100%;
+    
+    /* 🚨 THE FIX: Swapped 'height' for 'min-height' */
+    /* This ensures it's exactly 140px on desktop, but allows it to 
+       grow taller on mobile when the content stacks! */
+    min-height: 140px;              
+    height: auto;
+    
+    color: #ffffff;
+    
+    /* 🚨 THE FIX: Deleted 'overflow: hidden;' so wrapped content isn't invisible */
+}
+
+/* --- Left Side Typography & Spacing --- */
+
+.footer-left {
+    flex: 1;                    /* The Magic Fix: Tells the purple side to stretch and fill all remaining space */
+    min-width: 0;               
+}
+
+.footer-logo {
+    height: 57.8px;               
+    width: auto;
+    flex-shrink: 0;             /* Prevents the logo from shrinking */
+}
+
+.footer-divider {
+    width: 1px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.4); 
+    flex-shrink: 0;
+}
+
+.footer-plus-text {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 500;           
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+}
+
+.footer-social-text {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;           
+    font-size: 16px;
+    line-height: 1.2;
+    white-space: nowrap;        /* Forces text to stay on one clean line */
+}
+
+.footer-contact {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;           
+    font-size: 16px;
+    color: #ffffff;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;        /* Forces text to stay on one clean line */
+}
+
+.footer-contact:hover {
+    opacity: 0.7;               
+    color: #ffffff;
+}
+
+/* --- Social Icons --- */
+
+.footer-icon {
+    color: #ffffff;
+    font-size: 22px;            
+    transition: transform 0.3s ease;
+    display: flex;
+    text-decoration: none;
+}
+
+.footer-icon:hover {
+    transform: scale(1.15);     
+    color: #ffffff;
+}
+
+
+
+.footer-right {
+    flex: 0 0 auto;             
+    height: 140px;              
+}
+
+.footer-plants-img {
+    height: 100%;               
+    width: auto;                
+    display: block;
+    object-fit: contain;        
+}
+
+
+
+.vision-section {
+    
+    background-color: #EBF1A8; 
+    color: #13515A; 
+    overflow: visible; 
+}
+
+/* =========================================
+   MAIN TYPOGRAPHY (FLUID UPGRADE)
+   ========================================= */
+
+.vision-title {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 500;
+    /* Replaces 1.75rem. Shrinks to 20px on mobile, grows to 28px on desktop */
+    font-size: clamp(20px, 2.5vw, 28px);
+    letter-spacing: 1px;
+}
+
+.vision-subtitle {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 500;
+    /* Replaces 1.5rem */
+    font-size: clamp(18px, 2vw, 24px);
+}
+
+.vision-subhead {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    /* Replaces 1.25rem */
+    font-size: clamp(14px, 1.5vw, 20px);
+    margin-bottom: 5px;
+}
+
+.vision-body {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 500;
+    line-height: 1.5;
+    /* Replaces 1.5rem */
+    font-size: clamp(14px, 1.8vw, 24px);
+}
+
+.vision-body.small {
+    /* Replaces 0.875rem. The 'Brick Wall' text will use this to shrink beautifully! */
+    font-size: clamp(10px, 1.1vw, 14px); 
+}
+/* =========================================
+   SCROLL REVEAL ANIMATIONS
+   ========================================= */
+
+.scroll-reveal {
+    opacity: 0;
+    
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    /* We remove the animation-delay from CSS, JS will handle it! */
+}
+
+/* The JS will inject this class when the user scrolls down to the image */
+.scroll-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+.vision-canvas {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; 
+}
+
+
+.vision-graphic-anchor {
+    position: relative;
+    overflow: visible; 
+}
+.base-semicircle {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.floating-text {
+    position: absolute;
+    z-index: 10;
+}
+
+
+
+
+/* =========================================
+   CLICKABLE IMAGE ARCS
+   ========================================= */
+
+.clickable-arc {
+    z-index: 10;
+    cursor: pointer;
+    /* Smooth transitions for hovering */
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+/* When the user hovers, it slightly scales up and gets a little brighter */
+.clickable-arc:hover {
+    transform: scale(1.0);
+    filter: brightness(1.1); 
+}
+/* =========================================
+   DYNAMIC INFO BOX (ACCORDION)
+   ========================================= */
+
+.vision-info-collapse {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    /* Smooth slide-down and fade-in effect */
+    transition: max-height 1.5s ease-in-out, opacity 0.4s ease-in-out; 
+}
+
+/* The JS injects this class to open the box */
+.vision-info-collapse.is-open {
+    max-height: 400px; 
+    opacity: 1;
+}
+
+.vision-info-content {
+    background-color: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(19, 81, 90, 0.15);   
+    color: #13515A;
+}
+
+
+
+
+.root-runway {
+    
+    
+    overflow: visible; 
+    padding-bottom: 400px;
+}
+/* =========================================
+   THE SCROLL GROW ENGINE
+   ========================================= */
+
+.root-grow-mask {
+    /* Starts completely hidden */
+    clip-path: inset(0 0 100% 0); 
+    -webkit-clip-path: inset(0 0 100% 0); /* Added for Safari safety */
+}
+/* =========================================
+   SIDE BRANCH ITEMS (TEXT & PILLS)
+   ========================================= */
+
+/* Category 1: Floating Paragraphs */
+.branch-text-block {
+    color: #818A52;
+    z-index: 10;
+}
+
+.branch-text-title {
+    /* clamp(minimum, preferred fluid size, maximum) */
+    font-size: clamp(14px, 1.4vw, 20px); 
+}
+
+.branch-text-body {
+    font-size: clamp(10px, 0.9vw, 14px); 
+    line-height: 1.4;
+}
+
+/* Category 2: Expanding Pills */
+.branch-pill {
+    background-color: #ffffff;
+    
+    /* Converted 3px border to a fluid vw unit */
+    border: 0.2vw solid #B3A273; 
+    border-radius: 50px; 
+    color: #818A52;
+    
+    /* Fluid font size with an 8px safety net */
+    font-size: clamp(8px, 0.75vw, 11px);
+    
+    /* Converted top/bottom and left/right padding to fluid vw units */
+    padding: 0.4vw 1.2vw; 
+}
+
+/* =========================================
+   BRANCH REVEAL (SYNCED TO ROOT PHYSICS)
+   ========================================= */
+
+.branch-reveal {
+    opacity: 0;
+    transform: translateY(5px);
+    
+    /* 🚨 THE FIX: The Exit Speed */
+    /* This ultra-fast 0.1s transition only applies when the 'is-visible' class is REMOVED */
+    transition: opacity 0.1s ease-out, transform 0.1s ease-out;
+}
+
+.branch-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    
+    /* The Entrance Speed */
+    /* This luxurious 0.6s transition applies when the 'is-visible' class is ADDED */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* =========================================
+   DYNAMIC CONNECTING STEM (FLUID VERSION)
+   ========================================= */
+
+.dynamic-stem {
+    position: absolute;
+    left: 50.4%;
+    transform: translateX(-50%);
+    top: 90%; 
+    height: 0px; 
+    width: clamp(5px, 0.8vw, 14px); 
+    background-color: #BAB7A7; 
+    z-index: 1;
+}
